@@ -12,6 +12,19 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e48728907e.js" crossorigin="anonymous"></script>
 
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS STyle -->
+    <style>
+      body{
+        font-family: "Mulish", sans-serif;
+      }
+    </style>
+
 </head>
 <body>
     <header>
@@ -91,8 +104,8 @@
                     <h1 class="lg:text-6xl text-4xl font-extrabold  text-[#FFFFFF]">ReTro Forum</h1>
                     <p class="text-xl text-[#FFFFFF] my-8 lg:w-3/5 ">Welcome to our fun Retro! Dive into cool stories and enjoy timeless tales with us!</p>
                     <label class="input rounded-full flex items-center gap-2 lg:h-14 lg:w-3/5">
-                        <input type="text" class="grow rounded-full" placeholder="Search here anything" />
-                        <button class="btn bg-[#797DFC] text-[#FFFFFF] rounded-full px-6 border-[#797DFC] text-xl mb-4 lg:mb-0">Search</button>
+                        <input id="search-field" type="text" class="grow rounded-full" placeholder="Search here anything" />
+                        <button onclick="handlesearch()" class="btn bg-[#797DFC] text-[#FFFFFF] rounded-full px-6 border-[#797DFC] text-xl mb-4 lg:mb-0">Search</button>
                       </label>
                   </div>
                   <div class="bg-[#FFFFFF] lg:w-96 lg:p-12 p-3 flex gap-6 rounded-3xl justify-center">
@@ -123,9 +136,21 @@
                         <p>Discover the allure of yesteryears on our Retro Blog. Dive into vintage vibes, explore timeless trends, and relive the magic of the past with a modern twist. Join the journey! </p>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex gap-5">
                   <div id="discuss_post-container" class=""></div>
-                  <div class=""></div>
+                  <div class="rounded-3xl bg-[#33323220] p-6 w-1/3 h-auto">
+                    <div class="flex justify-between mb-4">
+                      <h1 class="text-3xl font-semibold">Title</h1>
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-check-double text-[#3DCE09]"></i>
+                        <h2 class="text-xl text-[#060606bd]">Mark as read (<span id="read-count">0</span>)</h2>
+                      </div>
+                    </div>
+                    <div id="read_container">
+                      
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
