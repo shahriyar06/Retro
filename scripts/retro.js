@@ -69,10 +69,12 @@ const displaydiscusspost = (discusses,search) =>{
         discusscontainer.appendChild(allpostcard);
         }   
     });
+    togglespinner(false,0);
 }
 
 // ..................handle search....
 const handlesearch = () =>{
+    togglespinner(true , 5000);
     const searchfield = document.getElementById('search-field');
     const  searchtext = searchfield.value;
     loaddiscusspost(searchtext);
@@ -105,6 +107,20 @@ const readcount = ()=>{
     const countvalue = value + 1;
     read.innerText = countvalue;
 
+}
+
+// spinner
+const togglespinner = (isloading , delaytime) =>{
+     const loadingspinner = document.getElementById('spinner');
+     if(isloading){
+        loadingspinner.classList.remove('hidden');
+        setTimeout(() => {
+            loadingspinner.classList.add('hidden');
+          }, delaytime);
+     }
+     else{
+        loadingspinner.classList.add('hidden');
+     }
 }
 
 // .................Latest post Api............
