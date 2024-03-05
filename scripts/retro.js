@@ -24,11 +24,11 @@ const displaydiscusspost = (discusses,search) =>{
             let myString = discuss.title;
             let titlereplace = myString.replace('\'', ',');
             const allpostcard = document.createElement('div');
-        allpostcard.classList = `border-2 border-[#797DFC] mb-5 flex gap-3 p-5 rounded-3xl bg-[#797dfc23]`;
+        allpostcard.classList = `border-2 border-[#797DFC] mb-5 lg:flex gap-3 p-5 rounded-3xl bg-[#797dfc23]`;
         allpostcard.innerHTML = `
         <div class=" relative">
-            <div class=" ">
-                <img src="${discuss?.image}" class="rounded-3xl w-28 h-28 " />
+            <div class="">
+                <img src="${discuss?.image}" class="rounded-3xl w-28 h-28" />
             </div>
             <div class=" absolute w-4 h-4 rounded-full ${activation} right-0 top-0">
                 
