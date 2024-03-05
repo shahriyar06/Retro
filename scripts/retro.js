@@ -13,22 +13,23 @@ const displaydiscusspost = discuss =>{
     const discusscontainer = document.getElementById('discuss_post-container');
     discuss.forEach(discuss => {
         const allpostcard = document.createElement('div');
-        allpostcard.classList = `border-2 border-[#797DFC] mb-5 flex p-5 rounded-3xl bg-[#797dfc23]`;
+        allpostcard.classList = `border-2 border-[#797DFC] mb-5 flex gap-3 p-5 rounded-3xl bg-[#797dfc23]`;
         allpostcard.innerHTML = `
         <div class="">
             <img src="${discuss?.image}" class="rounded-3xl w-28 h-28 " />
         </div>
         <div class="p-3">
-            <div class="flex gap-6 text-[#060606bb] text-xl">
+            <div class="flex gap-6 text-[#060606bb] text-base">
                 <h3># ${discuss?.category}</h3>
                 <h3>Author : ${discuss?.
                     author?.name}</h3>
             </div>
             <div>
-                <h3 class="text-4xl font-semibold">${discuss?.title}</h3>
-                <h3 class="text-[#060606bb] text-2xl">${discuss?.description}</h3>
+                <h3 class="text-3xl font-semibold my-4">${discuss?.title}</h3>
+                <h3 class="text-[#060606bb] text-xl">${discuss?.description}</h3>
             </div>
-            <div class="flex gap-4 items-center text-[#0606068e] text-xl">
+            <hr class="border-t-2 border-dashed text-[#060606b8] my-5">
+            <div class="flex gap-4 items-center text-[#0606068e] text-base">
                 <div class="flex gap-4 items-center">
                     <i class="fa-regular fa-message"></i>
                     <h3>${discuss?.comment_count}</h3>
@@ -47,7 +48,6 @@ const displaydiscusspost = discuss =>{
         discusscontainer.appendChild(allpostcard);
         
     });
-    console.log(discuss);
 }
 
 
